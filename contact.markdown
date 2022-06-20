@@ -3,7 +3,7 @@ layout: page
 title: Contact
 permalink: /contact/
 ---
-<form name="contact" class="page-form" accept-charset="UTF-8" action="https://posted.net.au/contact/thanks" target="_blank" method="POST" data-netlify="true">
+<form name="contact" method="POST" data-netlify="true" class="page-form" accept-charset="UTF-8" action="https://posted.net.au/contact/thanks" target="_blank">
     <label for="InputEmail">Email</label>
     <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" required="required">
     <label for="InputName">Name</label>
