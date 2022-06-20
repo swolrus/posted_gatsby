@@ -1,0 +1,44 @@
+{% include carousel.html %}
+
+<section class="content-body split">
+   <div class="product-spill col col-60">
+      <p>{{ product.content | remove: '<p>' | remove: '</p>' }}</p>
+      <label for="buy">Size</label>
+        <form class="buy" name="buy">
+          <select id="size" name="size" required>
+            <option value="" selected disabled>Select...</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
+          <button
+           class="btn snipcart-add-item"
+           id="{{ product.identifier }}"
+           data-item-id="{{ product.identifier }}"
+           data-item-name="{{ product.name }}"
+           data-item-price="{{ product.price }}"
+           data-item-image="{{ product.image }}"
+           data-item-url="{{ site.url }}{{ page.url }}"
+           data-item-description="{{ product.content | remove: '<p>' | remove: '</p>' -}}"
+           data-item-custom1-name="Size"
+           data-item-custom1-options="XS|S|M|L|XL|XXL"
+           data-item-custom1-required="true"
+           data-item-custom1-placeholder="Select size...">
+             <span class="btn-label">Add to cart (${{ product.price }})</span>
+          </button>
+          <script>
+          const button = document.querySelector('#{{ product.identifier }}')
+          const select = document.querySelector('#size')
+          select.addEventListener('change', () => {
+            // Sets the default frame color when adding the item
+            button.setAttribute("data-item-custom1-value", select.value)
+          })
+          </script>
+        </form>
+   </div>
+   <div class="col col-40 col-space">
+   </div>
+</section>

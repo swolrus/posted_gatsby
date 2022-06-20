@@ -1,0 +1,14 @@
+<article class="product split">
+  <div class="col col-50">
+     <div class="img-container">
+        <div class="aspect-1-1"></div>
+        <img src="{{ product.image }}" alt="{{ product.name }} product image">
+     </div>
+  </div>
+  <div class="col col-50">
+     <h2><a href="{{ product.url | relative_url }}">{{ product.name }}</a></h2>
+     <p class="color-secondary">{{ product.description }}</p>
+     <h3>${{ product.price }} AUD</h3>
+     <p class="meta">({{ product.category }})</p>
+  </div>
+</article>

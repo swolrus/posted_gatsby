@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{% assign product = page %}
+<article class="content">
+
+  <header class="content-header">
+    <h1><span class="svg-icon">{%- include icons/doc.svg -%}</span> {{ product.name | escape }}</h1>
+  </header>
+
+  {%- include product-page.html -%}
+
+</article>

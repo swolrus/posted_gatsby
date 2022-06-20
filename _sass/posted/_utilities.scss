@@ -1,0 +1,77 @@
+.color-secondary {
+  color: $border-color;
+}
+
+/**
+ * Image aspect and scale
+ */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+  }
+}
+
+.aspect-4-3 {
+  margin-top: 75%;
+  /* 4:3 aspect ratio */
+}
+.aspect-3-4 {
+  margin-top: calc(100% / 3 * 4);
+  /* 3:4 aspect ratio */
+}
+.aspect-1-1 {
+  margin-top: 100%;
+  /* 1:1 aspect ratio */
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: #{$content-width};
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2 * $spacing-unit;
+  padding-left: 2 * $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: #{$content-width};
+  }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * Icons
+ */
+.svg-icon {
+  height: auto;
+  width: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.125em;
+}
+.svg-icon svg {
+  fill: #{$grey-color};
+}
+.social-media-list {
+  li + li {
+    padding-top: 5px;
+  }
+}

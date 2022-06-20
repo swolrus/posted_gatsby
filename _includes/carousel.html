@@ -1,0 +1,25 @@
+<section class="carousel">
+  <button class="carousel__button carousel__button--left is-hidden">
+    {%- include icons/chevron-left.svg -%}
+  </button>
+  <div class="carousel__track-container">
+    <ul class="carousel__track">
+      {% for imagePath in product.images %}
+      {% capture numImg %}{{ forloop.length }}{% endcapture %}
+      <li class="carousel__slide current-slide">
+         <img class="carousel__image" src="{{ imagePath | relative_url }}" alt="" />
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <button class="carousel__button carousel__button--right">
+    {%- include icons/chevron-right.svg -%}
+  </button>
+
+  <div class="carousel__nav">
+    <button class="carousel__indicator current-slide"></button>
+    {% for naviIndex in (2..numImg) %}
+    <button class="carousel__indicator"></button>
+    {% endfor %}
+  </div>
+</section>

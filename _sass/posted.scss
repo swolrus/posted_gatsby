@@ -1,0 +1,74 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Fivo Sans Heavy';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Fivo Sans Heavy'), url('font/FivoSans-Heavy.woff') format('woff');
+}
+
+$base-font-family: "Arial Black", sans-serif !default;
+$alt-font-family: "Fivo Sans Heavy", "Trebuchet MS", serif !default;
+$base-font-size:   14px !default;
+$base-font-weight: 400 !default;
+$alt-font-weight: 900 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     32px !default;
+
+$grey-color-dark:           darken(#fff, 25%) !default;
+$grey-color:                darken(#fff, 60%) !default;
+$grey-color-light:          darken(#fff, 65%) !default;
+
+$text-color:                #000 !default;
+$text-color-alt:            lighten(#000, 20%) !default;
+$brand-color-primary:       #f79d79 !default;
+$brand-color-primary-alt:   darken($brand-color-primary, 10%) !default;
+$brand-color-secondary-alt: lighten($brand-color-primary, 5%);
+$border-color:              darken($brand-color-primary, 20%) !default;
+$error-color:               #fe6a42 !default;
+
+$background-color:          #ffffff !default;
+$background-color-shaded:   darken(#fff, 10%) !default;
+
+$table-text-align: left !default;
+
+$animation-duration: 300ms;
+$button-border-radius: 0.25rem;
+$button-border-width: 0.125rem;
+$link-underline-width: 0.15rem;
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio !important;
+}
+
+// Import partials.
+@import
+  "posted/snipcart",
+  "posted/mixins",
+  "posted/utilities",
+  "posted/form.scss",
+  "posted/base",
+  "posted/grid",
+  "posted/layout",
+  "posted/carousel",
+  "posted/syntax-highlighting"
+;

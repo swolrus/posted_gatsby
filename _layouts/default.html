@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+    <nav class="site-nav">
+      <div class="trigger">
+          <a class="page-link" href="{{ '/' | relative_url }}">
+            {%- include icons/home.svg -%}
+          </a>
+          <a class="page-link" href="{{ '/about' | relative_url }}">
+            {%- include icons/about.svg -%}
+          </a>
+          <a class="page-link" href="{{ '/contact' | relative_url }}">
+            {%- include icons/contact.svg -%}
+          </a>
+          <a class="page-link snipcart-checkout" href="#">
+            {%- include icons/cart.svg -%}
+          </a>
+      </div>
+    </nav>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+    <div id="snipcart" data-config-modal-style="side" data-api-key="NDg0OGY2MmMtMmZiMi00MTFiLWFmNWMtMjU0OTRlOTIzOTcyNjM3NjE3ODcyNjA2MjM0MDYx" data-templates-url="{{ '/assets/snipcart-templates.html' | relative_url }}">
+  </body>
+  <script async src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+</html>

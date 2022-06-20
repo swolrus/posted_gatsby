@@ -1,0 +1,220 @@
+#snipcart {
+    width: 100%;
+    *:focus {
+        outline: 1px dotted $border-color !important;
+    }
+
+    .snipcart-modal__container {
+        box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                    0 2px 4px rgba(0,0,0,0.07), 
+                    0 4px 8px rgba(0,0,0,0.07), 
+                    0 8px 16px rgba(0,0,0,0.07),
+                    0 16px 32px rgba(0,0,0,0.07), 
+                    0 32px 64px rgba(0,0,0,0.07);
+    }
+
+    .snipcart-payment-methods-list-item__button, .snipcart-base-button {
+        @extend .btn;
+        padding: 1rem 3rem 1rem 2rem !important;
+        flex-grow: unset !important;
+        background-color: $background-color !important;
+
+        &:hover {
+            color: $brand-color-primary !important;
+        }
+        .snipcart-base-button__label, .snipcart-payment-methods-list-item__label {
+            margin: 0;
+            padding: 0;
+            border-bottom: $button-border-width dashed $brand-color-primary;
+            padding-bottom: $button-border-width;
+            font-weight: bold;
+            font-family: $base-font-family;
+            font-size: 0.875rem;
+
+            transition: border-color $animation-duration,
+                        color $animation-duration;
+        }
+        .snipcart-payment-methods-list-item__label {
+            padding-bottom: 0;
+        }
+        .snipcart-base-button__icon, .snipcart-payment-methods-list-item__arrow {
+            color: $grey-color-light !important;
+            position: absolute;
+            right: 1rem;
+        }
+        .snipcart-payment-methods-list-item__icon {
+            height: 1.5rem !important;
+        }
+    }
+
+    .snipcart__font--primary {
+        font-family: $alt-font-family !important;
+        font-weight: $alt-font-weight !important;
+    }
+
+    .snipcart__font--secondary {
+        font-family: $base-font-family !important;
+        font-weight: $base-font-weight !important;
+    }
+
+    .snipcart-featured-payment-methods__title {
+        display: none !important;
+    }
+
+    .snipcart-button-link {
+        @extend a;
+    }
+
+    font-family: $base-font-family !important;
+    font-size: $base-font-weight !important;
+
+    /* ----------------- 
+        Colors
+    ----------------- */
+    --color-default: #{$text-color};
+    --color-alt: #{$grey-color};
+    --color-icon: #{$brand-color-primary};
+    --color-success: #{$brand-color-secondary-alt};
+    --color-error: #{$error-color};
+    --color-info: #{$brand-color-secondary-alt};
+
+    --color-link: #{$brand-color-primary};
+    --color-link-hover: #{$brand-color-primary-alt};
+    --color-link-active: var(--color-link);
+    --color-link-focus: var(--color-link);
+
+    --color-input: var(--color-default);
+    --color-input-hover: var(--color-input);
+    --color-input-focus: var(--color-input);
+    --color-input-checked: var(--color-input);
+    --color-input-disabled: var(--color-alt);
+    --color-input-error: var(--color-error);
+    --color-inputLabel: var(--color-default);
+    --color-inputLabel-hover: var(--color-inputLabel);
+    --color-inputLabel-focus: var(--color-inputLabel);
+    --color-inputIcon: var(--color-alt);
+    --color-inputIcon-hover: var(--color-default);
+    --color-inputIcon-focus: var(--color-inputIcon);
+    --color-inputIcon-checked: #{$grey-color-light};
+    --color-inputIcon-error: var(--color-error);
+    --color-inputPlaceholder: var(--color-alt);
+
+    --color-buttonSecondary: var(--color-link);
+    --color-buttonSecondary-hover: var(--color-link-hover);
+    --color-buttonSecondary-active: var(--color-buttonSecondary);
+    --color-buttonSecondary-focus: var(--color-link-hover);
+    --color-buttonSecondary-disabled: #{$grey-color};
+    --color-buttonSecondary-success: var(--color-success);
+    --color-buttonSecondary-error: var(--color-error);
+
+    --color-buttonDanger: #{darken($error-color, 20%)};
+    --color-buttonDanger-hover: #{$text-color};
+    --color-buttonDanger-active: var(--color-buttonDanger);
+    --color-buttonDanger-focus: var(--color-buttonDanger);
+    --color-buttonDanger-disabled: #{$grey-color-dark};
+    --color-buttonDanger-success: var(--color-default);
+    --color-buttonDanger-error: var(--color-default);
+
+    --color-badge: #{$grey-color-light};
+    --color-badge-active: #{$text-color};
+    --color-badge-disabled: #{$grey-color-light};
+
+    /* ----------------- 
+        Border colors
+    ----------------- */
+    --borderColor-default: #{$grey-color-light};
+    --borderColor-error: #{$error-color};
+
+    --borderColor-link: currentColor;
+    --borderColor-link-hover: currentColor;
+    --borderColor-link-active: currentColor;
+    --borderColor-link-focus: currentColor;
+
+    --borderColor-input: #{$grey-color-light};
+    --borderColor-input-hover: #{$border-color};
+    --borderColor-input-focus: var(--borderColor-input-hover);
+    --borderColor-input-checked: var(--borderColor-input-hover);
+    --borderColor-input-disabled: #{$error-color};
+    --borderColor-input-error: var(--borderColor-error);
+
+    --borderColor-buttonSecondary: var(--color-icon);
+    --borderColor-buttonSecondary-hover: var(--borderColor-buttonSecondary);
+    --borderColor-buttonSecondary-focus: var(--borderColor-buttonSecondary);
+    --borderColor-buttonSecondary-disabled: var(--borderColor-buttonSecondary);
+    --borderColor-buttonSecondary-success: var(--borderColor-buttonSecondary);
+    --borderColor-buttonSecondary-error: var(--borderColor-buttonSecondary);
+
+    --borderColor-badge: #{$grey-color};
+    --borderColor-badge-active: #{$border-color};
+    --borderColor-badge-disabled: #{$grey-color};
+
+    /* ----------------- 
+        Background colors
+    ----------------- */
+    --bgColor-default: #{$background-color-shaded};
+    --bgColor-alt: #{$background-color};
+    --bgColor-success: #{$background-color};
+    --bgColor-error: #{lighten($error-color, 20%)};
+    --bgColor-info: var(--bgColor-default);
+
+    --bgColor-modal: #{$background-color};
+    --bgColor-modalVeil: #{$background-color-shaded};
+
+    --bgColor-link: none;
+    --bgColor-link-hover: none;
+    --bgColor-link-active: none;
+    --bgColor-link-focus: #{$background-color};
+
+    --bgColor-input: #{$background-color};
+    --bgColor-input-hover: var(--bgColor-input);
+    --bgColor-input-focus: var(--bgColor-input);
+    --bgColor-input-checked: var(--borderColor-input-hover);
+    --bgColor-input-disabled: #{$background-color};
+    --bgColor-input-error: var(--bgColor-input);
+    --bgColor-input-autofill: #{$background-color};
+
+    --bgColor-buttonSecondary: #{$background-color};
+    --bgColor-buttonSecondary-hover: #{$background-color};
+    --bgColor-buttonSecondary-active: var(--bgColor-buttonSecondary);
+    --bgColor-buttonSecondary-focus: var(--bgColor-buttonSecondary);
+    --bgColor-buttonSecondary-disabled: #{$grey-color-light};
+    --bgColor-buttonSecondary-success: var(--bgColor-success);
+    --bgColor-buttonSecondary-error: var(--bgColor-error);
+
+    --bgColor-buttonDanger: #{lighten($error-color, 20%)};
+    --bgColor-buttonDanger-hover: #{lighten($error-color, 10%)};
+    --bgColor-buttonDanger-active: var(--color-buttonDanger);
+    --bgColor-buttonDanger-focus: var(--color-buttonDanger);
+    --bgColor-buttonDanger-disabled: #{$grey-color-dark};
+    --bgColor-buttonDanger-success: var(--color-default);
+    --bgColor-buttonDanger-error: var(--color-default);
+
+    --bgColor-badge: var(--bgColor-modal);
+    --bgColor-badge-active: #{lighten($border-color, 35%)};
+    --bgColor-badge-disabled: var(--bgColor-badge);
+
+    /* ----------------- 
+        Shadows
+    ----------------- */
+
+    --shadow-default: none;
+    --shadow-tooltip: none;
+
+    --shadow-link-focus: none;
+
+    --shadow-input-hover: none;
+    --shadow-input-focus: 0px 5px 10px -3px #{rgba($border-color, 0.2)};
+    --shadow-input-checked: none;
+
+    --shadow-buttonPrimary-hover: none;
+    --shadow-buttonPrimary-active: none;
+    --shadow-buttonPrimary-focus: none;
+
+    --shadow-buttonSecondary-hover: none;
+    --shadow-buttonSecondary-active: none;
+    --shadow-buttonSecondary-focus: none;
+
+    --shadow-buttonDanger-hover: none;
+    --shadow-buttonDanger-active: none;
+    --shadow-buttonDanger-focus: none;
+}
