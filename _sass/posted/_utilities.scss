@@ -39,8 +39,8 @@
   max-width: #{$content-width};
   margin-right: auto;
   margin-left: auto;
-  padding-right: 2 * $spacing-unit;
-  padding-left: 2 * $spacing-unit;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
   @extend %clearfix;
 
   @include media-query($on-laptop) {

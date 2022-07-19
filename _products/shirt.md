@@ -1,15 +1,15 @@
 ---
 layout: product
-identifier: urbcor
+identifier: mintimal
 category: Accessories
-name: Urban Coral
-description: Heavyweight winter t-shirt for you oversized lovers
-price: 45
+name: SS22 // Mintimalism Hood
+description: Mid weight hood for all year comfort.
+price: 80
 image: /assets/images/products/ShirtBlack.png
 images:
   - /assets/images/products/ShirtBlack.png
-  - /assets/images/products/logo_alt.png
 ---
-Posted presents a heavyweight T built for all seasons.
-  - Direct to garment printed design that will last.
-  - 300GSM
+Posted presents a mid weighted spring hood.
+  - Periwinkle styling, front and back
+  - 270 GSM
+  - Metal drawcord stay
