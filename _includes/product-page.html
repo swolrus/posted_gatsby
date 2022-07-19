@@ -18,7 +18,7 @@
            id="{{ product.identifier }}"
            data-item-id="{{ product.identifier }}"
            data-item-name="{{ product.name }}"
-           data-item-price="{{ product.price }}"
+           data-item-price="&quot;aud&quot;: {{ product.price }}"
            data-item-image="{{ product.image }}"
            data-item-url="{{ site.url }}{{ page.url }}"
            data-item-description="{{ product.content | remove: '<p>' | remove: '</p>' -}}"
